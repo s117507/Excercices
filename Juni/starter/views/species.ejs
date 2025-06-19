@@ -1,0 +1,84 @@
+<%- include("partials/header") %>
+<%- include("partials/navbar") %>
+
+<h1 class="page-title">Species: Royal Penguin</h1>
+<section class="detail-section full-width">
+    <p><strong>Habitat Type:</strong> Rocky shorelines</p>
+    <p><strong>Temperature Tolerance:</strong> -10°C to 15°C</p>
+    <p><strong>Diet:</strong> krill, fish, squid</p>
+    <p><strong>EndangermentStatus: <div class="status status-NT">NT</div></strong></p>
+</section>
+
+<h2 class="section-title">Penguins of this Species</h2>
+<table>
+    <thead>
+        <tr>
+            <th></th>
+            <th>ID</th>
+            <th>Nickname</th>
+            <th>Description</th>
+            <th>Species</th>
+            <th>Island</th>
+            <th>Gender</th>
+            <th>Weight</th>
+            <th>Height</th>
+            <th>Year</th>
+            <th>Age</th>
+            <th>Assigned To</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><img src="https://raw.githubusercontent.com/similonap/json/refs/heads/master/penguins/images/1747835243822-pe875j.jpg" width="100"></td>
+            <td>1</td>
+            <td>Pip</td>
+            <td>A playful young penguin fond of swimming.</td>
+            <td><a href="/species/1">Royal Penguin</a></td>
+            <td>Macquarie Island</td>
+            <td>Female</td>
+            <td>12.5 kg</td>
+            <td>65 cm</td>
+            <td>2019</td>
+            <td>6y</td>
+            <td>emilygreen</td>
+        </tr>
+        <tr>
+            <td><img src="https://raw.githubusercontent.com/similonap/json/refs/heads/master/penguins/images/1747835243822-swhm58.jpg" width="100"></td>
+            <td>4</td>
+            <td>Waddle</td>
+            <td>Leader of the rookery, very energetic.</td>
+            <td><a href="/species/1">Royal Penguin</a></td>
+            <td>Macquarie Island</td>
+            <td>Female</td>
+            <td>13.2 kg</td>
+            <td>66 cm</td>
+            <td>2018</td>
+            <td>7y</td>
+            <td>
+                <form method="post" action="/penguins/4/assign">
+                    <button type="submit">Assign to me</button>
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td><img src="https://raw.githubusercontent.com/similonap/json/refs/heads/master/penguins/images/1747835243822-wkfyeb.jpg" width="100"></td>
+            <td>7</td>
+            <td>Splash</td>
+            <td>Loves water sports, always active.</td>
+            <td><a href="/species/1">Royal Penguin</a></td>
+            <td>Macquarie Island</td>
+            <td>Female</td>
+            <td>14 kg</td>
+            <td>67 cm</td>
+            <td>2022</td>
+            <td>3y</td>
+            <td>
+                <form method="post" action="/penguins/7/assign">
+                    <button type="submit">Assign to me</button>
+                </form>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<%- include("partials/footer") %>

@@ -1,0 +1,216 @@
+<%- include("partials/header") %>
+<%- include("partials/navbar") %>
+<%- include("partials/flash") %>
+
+<form method="get" action="">
+  <label for="search">Search:</label>
+  <input type="text" id="q" name="q" value="">
+  <button type="submit">Search</button>
+  <label for="sortField">Sort by:</label>
+  <select id="sortField" name="sortField">
+    <option value="id" selected>Id</option>
+    <option value="nickname">Nickname</option>
+    <option value="description">Description</option>
+    <option value="species_id">Species_id</option>
+    <option value="island">Island</option>
+    <option value="gender">Gender</option>
+    <option value="weight">Weight</option>
+    <option value="height">Height</option>
+    <option value="year">Year</option>
+    <option value="image">Image</option>
+    <option value="assigned_to">Assigned_to</option>
+  </select>
+  <label for="sortDirection">Sort direction:</label>
+  <select id="sortDirection" name="sortDirection">
+    <option value="asc" selected>Ascending</option>
+    <option value="desc">Descending</option>
+  </select>
+  <button type="submit">Sort</button>
+</form>
+
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th>ID</th>
+      <th>Nickname</th>
+      <th>Description</th>
+      <th>Species</th>
+      <th>Island</th>
+      <th>Gender</th>
+      <th>Weight</th>
+      <th>Height</th>
+      <th>Year</th>
+      <th>Age</th>
+      <th>Assigned To</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><img src="https://raw.githubusercontent.com/similonap/json/refs/heads/master/penguins/images/1747835243822-pe875j.jpg" width="100"></td>
+      <td>1</td>
+      <td>Pip</td>
+      <td>A playful young penguin fond of swimming.</td>
+      <td><a href="/species/1">Royal Penguin</a></td>
+      <td>Macquarie Island</td>
+      <td>Female</td>
+      <td>12.5 kg</td>
+      <td>65 cm</td>
+      <td>2019</td>
+      <td>6y</td>
+      <td>emilygreen</td>
+    </tr>
+    <tr>
+      <td><img src="https://raw.githubusercontent.com/similonap/json/refs/heads/master/penguins/images/1747835243822-v8ak7d.jpg" width="100"></td>
+      <td>2</td>
+      <td>Tux</td>
+      <td>Keen diver known for hunting skills.</td>
+      <td><a href="/species/2">King Penguin</a></td>
+      <td>South Georgia</td>
+      <td>Male</td>
+      <td>28 kg</td>
+      <td>90 cm</td>
+      <td>2017</td>
+      <td>8y</td>
+      <td>jordanlee</td>
+    </tr>
+    <tr>
+      <td><img src="https://raw.githubusercontent.com/similonap/json/refs/heads/master/penguins/images/1747835243822-cyh638.jpg" width="100"></td>
+      <td>3</td>
+      <td>Flipper</td>
+      <td>Likes to bask on the icy shore.</td>
+      <td><a href="/species/3">African Penguin</a></td>
+      <td>Boulders Beach</td>
+      <td>Male</td>
+      <td>3 kg</td>
+      <td>45 cm</td>
+      <td>2021</td>
+      <td>4y</td>
+      <td>
+        <form method="post" action="/penguins/3/assign">
+          <button type="submit">Assign to me</button>
+        </form>
+      </td>
+    </tr>
+    <tr>
+      <td><img src="https://raw.githubusercontent.com/similonap/json/refs/heads/master/penguins/images/1747835243822-swhm58.jpg" width="100"></td>
+      <td>4</td>
+      <td>Waddle</td>
+      <td>Leader of the rookery, very energetic.</td>
+      <td><a href="/species/1">Royal Penguin</a></td>
+      <td>Macquarie Island</td>
+      <td>Female</td>
+      <td>13.2 kg</td>
+      <td>66 cm</td>
+      <td>2018</td>
+      <td>7y</td>
+      <td>
+        <form method="post" action="/penguins/4/assign">
+          <button type="submit">Assign to me</button>
+        </form>
+      </td>
+    </tr>
+    <tr>
+      <td><img src="https://raw.githubusercontent.com/similonap/json/refs/heads/master/penguins/images/1747835243822-fmyok.jpg" width="100"></td>
+      <td>5</td>
+      <td>Pebble</td>
+      <td>Collects colorful pebbles, gentle disposition.</td>
+      <td><a href="/species/4">Erect-crested Penguin</a></td>
+      <td>Antipodes Island</td>
+      <td>Female</td>
+      <td>6.5 kg</td>
+      <td>50 cm</td>
+      <td>2020</td>
+      <td>5y</td>
+      <td>alexbio</td>
+    </tr>
+    <tr>
+      <td><img src="https://raw.githubusercontent.com/similonap/json/refs/heads/master/penguins/images/1747835243822-ysqdtp.jpg" width="100"></td>
+      <td>6</td>
+      <td>Frost</td>
+      <td>Prefers colder climates, shy around others.</td>
+      <td><a href="/species/2">King Penguin</a></td>
+      <td>South Georgia</td>
+      <td>Male</td>
+      <td>25.7 kg</td>
+      <td>88 cm</td>
+      <td>2016</td>
+      <td>9y</td>
+      <td>
+        <form method="post" action="/penguins/6/assign">
+          <button type="submit">Assign to me</button>
+        </form>
+      </td>
+    </tr>
+    <tr>
+      <td><img src="https://raw.githubusercontent.com/similonap/json/refs/heads/master/penguins/images/1747835243822-wkfyeb.jpg" width="100"></td>
+      <td>7</td>
+      <td>Splash</td>
+      <td>Loves water sports, always active.</td>
+      <td><a href="/species/1">Royal Penguin</a></td>
+      <td>Macquarie Island</td>
+      <td>Female</td>
+      <td>14 kg</td>
+      <td>67 cm</td>
+      <td>2022</td>
+      <td>3y</td>
+      <td>
+        <form method="post" action="/penguins/7/assign">
+          <button type="submit">Assign to me</button>
+        </form>
+      </td>
+    </tr>
+    <tr>
+      <td><img src="https://raw.githubusercontent.com/similonap/json/refs/heads/master/penguins/images/1747835243822-xs9g4.jpg" width="100"></td>
+      <td>8</td>
+      <td>Chilly</td>
+      <td>Enjoys sliding on ice with friends.</td>
+      <td><a href="/species/2">King Penguin</a></td>
+      <td>South Georgia</td>
+      <td>Female</td>
+      <td>29.4 kg</td>
+      <td>92 cm</td>
+      <td>2020</td>
+      <td>5y</td>
+      <td>
+        <form method="post" action="/penguins/8/assign">
+          <button type="submit">Assign to me</button>
+        </form>
+      </td>
+    </tr>
+    <tr>
+      <td><img src="https://raw.githubusercontent.com/similonap/json/refs/heads/master/penguins/images/1747835243822-vk60nr.jpg" width="100"></td>
+      <td>9</td>
+      <td>Spot</td>
+      <td>Has a unique spot pattern on belly.</td>
+      <td><a href="/species/3">African Penguin</a></td>
+      <td>Boulders Beach</td>
+      <td>Male</td>
+      <td>3.1 kg</td>
+      <td>46 cm</td>
+      <td>2021</td>
+      <td>4y</td>
+      <td>carlossmith</td>
+    </tr>
+    <tr>
+      <td><img src="https://raw.githubusercontent.com/similonap/json/refs/heads/master/penguins/images/1747835243822-4ezba.jpg" width="100"></td>
+      <td>10</td>
+      <td>Shadow</td>
+      <td>Often seen during dusk, very quiet.</td>
+      <td><a href="/species/4">Erect-crested Penguin</a></td>
+      <td>Antipodes Island</td>
+      <td>Male</td>
+      <td>6.8 kg</td>
+      <td>51 cm</td>
+      <td>2019</td>
+      <td>6y</td>
+      <td>
+        <form method="post" action="/penguins/10/assign">
+          <button type="submit">Assign to me</button>
+        </form>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<%- include("partials/footer") %>
