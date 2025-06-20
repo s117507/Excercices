@@ -39,7 +39,7 @@ export interface Species {
 export interface Researcher {
     username: string;
     fullname: string;
-    pincode?: string;
+    pincode: string;
     avatar: string;
 }
 
