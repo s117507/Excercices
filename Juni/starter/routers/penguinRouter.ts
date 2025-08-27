@@ -10,6 +10,12 @@ export function penguinRouter() {
         const sortField = SORT_FIELDS.includes(req.query.sortField as string) ? req.query.sortField as string : "nickname";
         const sortDirection = req.query.sortDirection === "desc" ? -1 : 1;
         const q = req.query.q?.toString() || "";
+        const sortField = SORT_FIELDS.includes(req.query.sortField as string) ? req.query.sortField as string : "nickname";
+        const sortDirection = req.query.sortDirection === "desc" ? -1 : 1;
+        const q = req.query.q?.toString() || "";
+        const sortField = SORT_FIELDS.includes(req.query.sortField as string) ? req.query.sortField as string : "nickname";
+        const sortDirection = req.query.sortDirection === "desc" ? -1 : 1;
+        const q = req.query.q?.toString() || "";
 
         const penguins = await getAllPenguins(sortField, sortDirection, q);
 
