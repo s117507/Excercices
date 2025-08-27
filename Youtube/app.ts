@@ -1,7 +1,7 @@
 import express, { Express } from "express";
 import dotenv from "dotenv";
 import path from "path";
-
+import rootRouter from "./router/rootRouter";
 dotenv.config();
 
 const app : Express = express();
